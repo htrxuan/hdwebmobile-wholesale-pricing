@@ -18,8 +18,8 @@ HDWebmobile Wholesale Pricing gives your trade customers their own pricing. Set 
 
 Customers ask for wholesale access through an application form (on the My Account dashboard, or the `[hdws_apply]` shortcode). You review applications on one screen and approve or reject each one.
 
-= Why this plugin exists =
-Wholesale and "lead capture" plugins have repeatedly turned their registration flow into a privilege-escalation hole. "WooCommerce Wholesale Lead Capture" (versions before 2.0.3.2) shipped CVE-2026-27542: an **unauthenticated privilege escalation to administrator** through the registration/lead flow, because role information was taken from the request.
+= Security by design =
+Wholesale and "lead capture" registration flows are a common privilege-escalation risk: if role information is taken from the request, an **unauthenticated visitor can register as an administrator**.
 
 This plugin makes that class of bug impossible by construction:
 
