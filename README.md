@@ -12,7 +12,7 @@ Set a wholesale price per product, or a single store-wide percentage discount. L
 
 ## Why this plugin exists
 
-Wholesale / lead-capture plugins keep turning their registration flow into a privilege-escalation hole. "WooCommerce Wholesale Lead Capture" (< 2.0.3.2) shipped CVE-2026-27542 — unauthenticated privilege escalation to administrator, because role information was taken from the request.
+Wholesale / lead-capture plugins are prone to turning their registration flow into a privilege-escalation hole, when role information is taken from the request.
 
 This plugin makes that impossible by construction:
 

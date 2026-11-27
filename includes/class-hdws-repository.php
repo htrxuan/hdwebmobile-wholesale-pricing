@@ -9,10 +9,8 @@ if (!defined('ABSPATH')) {
 /**
  * The wholesale-application store, and the ONLY place the wholesale role is ever granted.
  *
- * CVE-2026-27542 (unauthenticated privilege escalation to administrator) in "WooCommerce
- * Wholesale Lead Capture" (< 2.0.3.2): its lead/registration flow acted on role information
- * coming from the request, so an attacker could register themselves straight into a
- * privileged role.
+ * The risk this guards against: a registration flow that acts on role information coming
+ * from the request, letting an attacker register themselves straight into a privileged role.
  *
  * This class makes that impossible by construction:
  *
